@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" style="scrollbar-gutter: stable;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boteco Market</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        /* Reset de Foco e Interação Total */
+        *:focus, *:active, *:focus-visible {
+            outline: none !important;
+            box-shadow: none !important;
+            -webkit-tap-highlight-color: transparent !important;
+        }
+
+        /* Remove o contorno padrão do sistema em botões */
+        button::-moz-focus-inner {
+            border: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+            color: #f8fafc;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .glass-panel {
+            background: #101010;
+            border: 1px solid #1E1E1E;
+        }
+        
+        .navbar-glass {
+            background: rgba(5, 5, 5, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid #1E1E1E;
+        }
+
+        .text-brand { color: #b08d57; }
+        .bg-brand { background-color: #826538; }
+        .border-brand { border-color: #826538; }
+        
+        main {
+            min-height: 80vh;
+        }
+
+        /* Suaviza a transição de cores mas remove qualquer atraso visual de bordas */
+        .category-btn {
+            transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.1s;
+        }
+
+        /* Efeito de Reflexo (Shine) */
+        @keyframes shine {
+          0% { left: -100%; }
+          20% { left: 100%; }
+          100% { left: 100%; }
+        }
+
+        .animate-shine {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .animate-shine::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 50%;
+          height: 100%;
+          background: linear-gradient(
+            to right,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent
+          );
+          transform: skewX(-25deg);
+          animation: shine 4s infinite;
+        }
+
+        /* Custom Scrollbar */
+        .custom-scrollbar::-webkit-scrollbar {
+          width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+          background: #0a0a0a;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: #826538;
+          border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: #b08d57;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
