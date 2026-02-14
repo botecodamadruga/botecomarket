@@ -94,8 +94,8 @@ export const SHOP_ITEMS: ShopItem[] = [
   },
   {
     id: 'bg-13',
-    name: 'Forja do Ferreiro',
-    description: 'O calor da forja onde ferro bruto vira poder e proteção.',
+    name: 'Ritmo Urbano',
+    description: 'Ruas movimentadas, prédios altos e uma cidade que nunca para.',
     price: 1000,
     category: ItemCategory.BACKGROUND,
     imageUrl: 'https://i.imgur.com/M5lBryn.png',
